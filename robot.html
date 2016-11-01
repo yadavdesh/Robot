@@ -4,6 +4,7 @@
 <link href='https://fonts.googleapis.com/css?family=Poller+One' rel='stylesheet' type='text/css'>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <style src="/rob.css"></style>
+  <script src="/robjs.js"></script>
 </head>
 
 <body>
@@ -22,30 +23,5 @@
 <button class="color">change color!</button>
 <button class="moves">break/dance</button>
 <img src="https://ga-dash.s3.amazonaws.com/production/assets/dance_cotter.gif">
-<script>
-// When eyes button is clicked, toggle laser class on brain
-$(".flash").click(function() {
-  $(".brain").toggleClass('laser');
-});
 
-// When color button is clicked...
-$(".color").click(function() {
-  // assign each named color a random number 0-255
-  var red = Math.floor(Math.random() * 255);
-  var green = Math.floor(Math.random() * 255);
-  var blue = Math.floor(Math.random() * 255);
-  // Genrate an RGBA value from red, green and blue
-  var randomRGBA = 'rgba('+red+','+ green +','+blue+',1)';
-  
-  //and change the body's background to our random color
-  $("body").css("background", randomRGBA);
-  
-  //Display the three values in an alert window
-  //alert(randomRGBA);
-});
-
-$(".moves").click(function(){
-  $("img").toggle();
-});
-</script>
 </body>
